@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
 
 ## Configure the compile run of subscriber
 Steps same as publisher
-Add two lines to `learning\_topic/CMakeLists.txt` (in <font color=#00ffff>build</font> part):
+Add two lines to `learning\_topic/CMakeLists.txt` (in <font color=#00bbbb>build</font> part):
 ```txt
 add_executable(velocity_publisher src/pose_subscriber.cpp)
 target_link_libraries(pose_subsriber ${catkin_LIBRARIES})

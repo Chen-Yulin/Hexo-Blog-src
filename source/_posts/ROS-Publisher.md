@@ -32,8 +32,8 @@ $ ls
 CMakeLists.txt  include  package.xml  src
 ```
 **How to realize a publisher?**
-- Initialize <font color=#00ffff>ROS node</font>
-- register node info from <font color=#00ffff>ROS Master</font>, including name of the topic and msg type
+- Initialize <font color=#00bbbb>ROS node</font>
+- register node info from <font color=#00bbbb>ROS Master</font>, including name of the topic and msg type
 - create message data
 - publish message at a specific frequency
 
@@ -84,7 +84,7 @@ Steps:
 - set the code need to be complied and the generated excutable file
 - set the link library
 
-Add two lines to `learning\_topic/CMakeLists.txt` (in <font color=#00ffff>build</font> part):
+Add two lines to `learning\_topic/CMakeLists.txt` (in <font color=#00bbbb>build</font> part):
 ```txt
 add_executable(velocity_publisher src/velocity_publisher.cpp)
 target_link_libraries(velocity_publisher ${catkin_LIBRARIES})

@@ -40,13 +40,13 @@ Can be used to detect/replace/take out specific substring
 | . | match any single char except \\n  |  |
 | [ | mark the beginning of a []expression |  |
 | ? | match the front subexpression one or zero times, or indicate a non-greedy qualifier |  |
-| \| | logic <font color=#00ffff>or</font> |  |
+| \| | logic <font color=#00bbbb>or</font> |  |
 
 ## Application in Cpp
 In cpp, we use `std::regex` to express regular expression, supporting ECMAScripts as default.
 
 ### Match
-Use `regex_match()` to match <font color=#00ffff>xml</font> (or <font color=#00ffff>html</font>) format:
+Use `regex_match()` to match <font color=#00bbbb>xml</font> (or <font color=#00bbbb>html</font>) format:
 ```cpp
 std::regex reg("<.*>.*</.*>");
 

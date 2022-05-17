@@ -13,6 +13,24 @@ cover: /gallery/UAV-fw.png
 thumbnail: /thumb/lena.png
 ---
 
+# Catalog
+
+<!-- vim-markdown-toc Marked -->
+
+* [Introduce](#introduce)
+    * [Motivation](#motivation)
+    * [Objective](#objective)
+* [Implementation](#implementation)
+    * [Environment Preparation](#environment-preparation)
+    * [Foundation](#foundation)
+    * [Code Review](#code-review)
+        * [Function detect\_target](#function-detect\_target)
+            * [Overview](#overview)
+            * [Get the estimated area of the target by color filtering](#get-the-estimated-area-of-the-target-by-color-filtering)
+
+<!-- vim-markdown-toc -->
+
+
 # Introduce
 ## Motivation
 We want to apply computer vision to the plane to fullfill ground investigation task automatically.
@@ -20,7 +38,7 @@ We want to apply computer vision to the plane to fullfill ground investigation t
 The input image looks like this:
 ![InputImg](img56.png "img56")
 
-And we hope the output prediction to be <font color=#00ffff>56</font>.
+And we hope the output prediction to be <font color=#00bbbb>56</font>.
 
 # Implementation
 ## Environment Preparation
@@ -54,7 +72,7 @@ def detect_target(image):
 def get_numberShot(img, rect_list, ROI):
     ...
 ```
-### Function `detect_target`
+### Function detect\_target
 #### Overview
 `detect_target` receive image data(three channels, BGR), detect the colored targets and returns the index of them.
 
@@ -97,7 +115,7 @@ after_mask=cv2.add(image_cut, np.zeros(np.shape(image_cut), dtype=np.uint8), mas
 ```
 ![after_mask](after_mask.png "after_mask")
 
-Turn the <font color=#00ffff>after mask</font> image into binary image and adapt close and open processing to fill holes and cancel noise.
+Turn the <font color=#00bbbb>after mask</font> image into binary image and adapt close and open processing to fill holes and cancel noise.
 ```python3
 kernel=np.ones([3,3],np.uint8)
 close=cv2.morphologyEx(binary,cv2.MORPH_CLOSE,kernel,iterations=3)

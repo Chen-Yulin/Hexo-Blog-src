@@ -14,6 +14,19 @@ thumbnail: /thumb/hexo.png
 ---
 This post record the steps I set up this blog site.
 
+# Catalog
+
+<!-- vim-markdown-toc Marked -->
+
+* [Env preparation](#env-preparation)
+* [Github](#github)
+    * [Connection](#connection)
+    * [Setup Github Pages repository](#setup-github-pages-repository)
+* [Install Hexo](#install-hexo)
+* [Deploy to Github server](#deploy-to-github-server)
+
+<!-- vim-markdown-toc -->
+
 ## Env preparation
 Installation
 - Install [Node.js](https://nodejs.org/zh-cn/)
